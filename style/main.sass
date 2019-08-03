@@ -1,0 +1,125 @@
+$tablets: 760px
+$phones : 480px
+
+@mixin tablets 
+    @media (max-width: $tablets) 
+        @content;
+        
+@mixin phones 
+    @media (max-width: $phones) 
+        @content;
+        
+*  
+    box-sizing: border-box 
+   
+ul 
+    list-style-type: none 
+    padding: 0 
+    margin : 0 
+ol
+    padding: 0 
+    margin : 0 
+    color: #1450b7 
+body  
+    font-family: Tahoma, Verdana, sans-serif
+a 
+    text-decoration: none
+p
+    margin: 0
+    letter-spacing: -0.7px
+img
+    display: block
+    max-width: 100%
+    max-height: 100%
+
+.container  
+    margin   : 0 auto  
+    max-width: 360px 
+    @include tablets
+        max-width: 700px 
+        margin: 10px
+
+.banner
+    &-bg
+        background-color: white
+        width: 28%
+        min-height: 550px
+        border-color: #d2e2ee
+        border-width: 10px 10px 20px 10px
+        border-style: solid
+        @include tablets
+            width: 100%
+            font-size: 20px
+        @include phones
+            width: 100%
+            font-size: 16px
+    &__pic
+        margin: 0 auto
+        height: 100px
+        width: 100px
+        @include tablets
+            height: 200px
+            width: 200px
+        @include phones
+            height: 100px
+            width: 100px
+    &__img 
+        margin: 14px 0px
+    &__pic-desc
+        color: grey
+        text-align: center
+        margin-bottom: 18px
+        letter-spacing: -0.7px
+    &__desc-cleaner
+        text-align: center
+        margin-bottom: 15px
+        br
+            @include tablets
+            display: none
+    &__list
+        margin-bottom: 17px
+    &__item
+       padding-bottom: 10px
+    &__item-pic
+        float: left
+        @include tablets
+            width: 20px
+            height: 20px
+    &__ficha
+        br
+            @include tablets
+                display: none
+    &__button
+        background-color: #e7eaec
+        padding: 10px 22px
+        border-radius: 10px
+        border: 1px solid #d6dbdd
+        margin-bottom: 14px
+        display: flex
+        flex-direction: column
+        align-items: center
+        &-item
+            letter-spacing: -0.7px
+            padding-bottom: 8px
+        &-list
+            @include phones
+                padding: 0px 20px
+.button
+    padding: 3% 35%
+    border-radius: 8px
+    border: 1px solid #4355b6
+    background-color: #4355b6
+    color: white
+    text-transform: uppercase
+    font-size: 14px
+    font-size: 20px
+    font-weight: bold
+    cursor: pointer
+    outline: 0
+    &:hover
+        background-color: white
+        color:  #4355b6
+    @include tablets
+        font-size: 30px
+    @include phones
+        font-size: 20px
