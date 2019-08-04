@@ -118,23 +118,21 @@ img {
 }
 
 .banner__item {
+  letter-spacing: -0.7px;
   padding-bottom: 10px;
-}
-
-.banner__ficha {
   line-height: 0.9;
 }
 
-.banner__ficha:before {
+@media (max-width: 780px) {
+  .banner__item br {
+    Sdisplay: none;
+  }
+}
+
+.banner__item:before {
   content: url("../images/star.svg");
   margin-right: 5px;
   vertical-align: middle;
-}
-
-@media (max-width: 780px) {
-  .banner__ficha br {
-    display: none;
-  }
 }
 
 .banner__button {
@@ -168,7 +166,7 @@ img {
 
 .button {
   width: 100%;
-  padding: 10px 21px;
+  padding: 10px 20px;
   border-radius: 8px;
   border: 1px solid #4355b6;
   background-color: #4355b6;

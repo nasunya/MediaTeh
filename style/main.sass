@@ -80,16 +80,17 @@ img
     &__list
         margin: 0px 0px 18px 15px
     &__item
-       padding-bottom: 10px
-    &__ficha
+        letter-spacing: -0.7px
+        padding-bottom: 10px
         line-height: 0.9
-        &:before
-            content: url("../images/star.svg")
-            margin-right: 5px
-            vertical-align: middle
         br
             @include tablets
-                display: none
+                Sdisplay: none
+    &__item:before
+        content: url("../images/star.svg")
+        margin-right: 5px
+        vertical-align: middle
+      
     &__button
         background-color: #e7eaec
         padding: 10px 22px
