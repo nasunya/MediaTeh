@@ -24,3 +24,7 @@ function notifyMe() {
     }
 
     notifyMe()
+
+    elem.onclick = function() {
+        window.location.assign('https://www.google.ru/');
+      };
