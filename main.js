@@ -9,7 +9,7 @@ function notifyMe() {
   // Проверка разрешения на отправку уведомлений
   else if (Notification.permission === "granted") {
   // Если разрешено, то создаем уведомление
-  var notification = new Notification("Привет!Cпасибо за разрешение!");
+  var notification = new Notification("Привет! Cпасибо за разрешение! Теперь ты будешь в курсе всех новостей :)");
   }
   
   // В противном случае, запрашиваем разрешение
@@ -17,7 +17,7 @@ function notifyMe() {
   Notification.requestPermission(function (permission) {
   // Если пользователь разрешил, то создаем уведомление 
   if (permission === "granted") {
-  var notification = new Notification("Привет!Cпасибо за разрешение!");
+  var notification = new Notification("Привет! Cпасибо за разрешение! Теперь ты будешь в курсе всех новостей :)");
   }
   });
   }
