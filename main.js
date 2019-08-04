@@ -28,4 +28,4 @@ function notifyMe() {
     elem.onclick = function() {
         console.log(window.location.href);
         window.location.assign('https://www.google.ru/');
-      };
+    };
