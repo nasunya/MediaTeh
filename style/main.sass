@@ -1,4 +1,4 @@
-$tablets: 760px
+$tablets: 780px
 $phones : 480px
 
 @mixin tablets 
@@ -34,25 +34,25 @@ img
 
 .container  
     margin   : 0 auto  
-    max-width: 360px 
+    max-width: 400px 
     @include tablets
         max-width: 700px 
         margin: 10px
 
 .banner
-    &-bg
-        background-color: white
-        width: 28%
-        min-height: 550px
-        border-color: #d2e2ee
-        border-width: 10px 10px 20px 10px
-        border-style: solid
-        @include tablets
-            width: 100%
-            font-size: 20px
-        @include phones
-            width: 100%
-            font-size: 16px
+    margin: 0 auto
+    background-color: white
+    width: 30%
+    min-height: 550px
+    border-color: #d2e2ee
+    border-width: 10px 10px 20px 10px
+    border-style: solid
+    @include tablets
+        width: 100%
+        font-size: 20px
+    @include phones
+        width: 100%
+        font-size: 16px
     &__pic
         margin: 0 auto
         height: 100px
@@ -73,19 +73,20 @@ img
     &__desc-cleaner
         text-align: center
         margin-bottom: 15px
+        line-height: 0.9
         br
             @include tablets
-            display: none
+                display: none
     &__list
-        margin-bottom: 17px
+        margin: 0px 0px 18px 15px
     &__item
        padding-bottom: 10px
-    &__item-pic
-        float: left
-        @include tablets
-            width: 20px
-            height: 20px
     &__ficha
+        line-height: 0.9
+        &:before
+            content: url("../images/star.svg")
+            margin-right: 5px
+            vertical-align: middle
         br
             @include tablets
                 display: none
@@ -94,7 +95,7 @@ img
         padding: 10px 22px
         border-radius: 10px
         border: 1px solid #d6dbdd
-        margin-bottom: 14px
+        margin: 0px 15px 13px 15px
         display: flex
         flex-direction: column
         align-items: center
@@ -105,7 +106,8 @@ img
             @include phones
                 padding: 0px 20px
 .button
-    padding: 3% 35%
+    width: 100%
+    padding: 10px 20px
     border-radius: 8px
     border: 1px solid #4355b6
     background-color: #4355b6
